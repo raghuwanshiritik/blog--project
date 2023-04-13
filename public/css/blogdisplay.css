@@ -1,0 +1,55 @@
+.ii{
+    background:#32bfda ;
+}
+.tw{
+    color:#014a39;
+    border: 1px solid black;
+    width: 100%;
+    font-family: fantasy;
+}
+.ty :hover{
+    background:#32bfda;
+    
+}
+.rr{
+    font-family: maths;
+}
+.ii{
+    background:#32bfda ;
+}
+.tw{
+    color:#014a39;
+    border: 1px solid black;
+    width: 100%;
+    font-family: fantasy;
+   
+}
+.ty :hover{
+    background:#32bfda;
+    
+}
+
+table,tr,td,th{
+    border: 2px solid #2f4f4f;
+    width: 600px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-collapse: collapse;
+}
+tr:hover{
+    background:#008b8b;
+ }
+ th:hover{
+    background:#556b2f;
+ }
+td:hover{
+    background: #800000;
+}
+.mr{
+    font-size: 35px;
+}
+.pp{
+    margin-left: 500px;
+    margin-top:-50px;
+}

@@ -1,0 +1,25 @@
+<%- include('../../header.ejs') %>
+<link rel="stylesheet" href="/css/edit.css">
+<div class="container">
+    <div class="row">
+ <%- include('../adminsidebar.ejs') %>
+    <div class="col-md-8 mp">
+<h4>About Update</h4>
+<form action="/aboutupdate/<%= edit._id %>" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="">About</label>
+       <textarea type="text" class="form-control" name="title" rows="10"><%= edit.title%></textarea>
+       <br>
+       <div class="md-3 mb-3">
+        <label for="">Upload image</label>
+        <input type="file" name="image" class="form-control">
+    </div>
+    <div class="md-3 mb-3">
+    <img src="<%= edit.image.url %>">
+</div>
+    <button class="btn btn-info">update</button>
+</form>
+</div>
+</div><!--row-end-->
+</div><!--container-end-->
+<%- include('../../footer.ejs') %>

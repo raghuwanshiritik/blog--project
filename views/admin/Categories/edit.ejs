@@ -1,0 +1,18 @@
+<%- include('../../header.ejs') %>
+<link rel="stylesheet" href="/css/edit.css">
+<div class="container">
+    <div class="row">
+ <%- include('../adminsidebar.ejs') %>
+    <div class="col-md-8 mp">
+<h4>Categories Update</h4>
+<form action="/categoriesupdate/<%= edit._id %>" method="post">
+    <div class="md-3">
+        <label for=>Cat_name</label>
+        <input  type="text" name="cat_name" class="form-contrl">
+    </div>
+    <button class="btn btn-info">update</button>
+</form>
+</div>
+</div><!--row-end-->
+</div><!--container-end-->
+<%- include('../../footer.ejs') %>

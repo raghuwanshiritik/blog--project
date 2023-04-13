@@ -1,0 +1,48 @@
+<%- include('../../header.ejs') %>
+<link rel="stylesheet" href="/css/logoutdisplay.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 ty"style="margin-top:100px;">
+            <a href="/admin/dashboard" 
+            <button type="button" class="btn  tw ii">Dashboard</button>
+        </a>
+        <a href="/admin/blogdisplay" 
+            <button type="button" class="btn  tw">Display Blog</button>
+            <a href="/admin/Categoriesdisplay" 
+            <button type="button" class="btn  tw">Categories</button>
+        </a>
+            <a href="/admin/contactdisplay" 
+            <button type="button" class="btn  tw">Contact</button>
+        </a>
+            <a href="/admin/Aboutdisplay" 
+            <button type="button" class="btn  tw">About</button>
+        </a>
+            <a href="/admin/logutdisplay" 
+            <button type="button" class="btn  tw">Logout</button>
+        </a>
+        </div>
+ 
+        <div class="col-md-6 text-center mj">
+            <div class="col-md-6 bg-white w-100 ">
+                <h2 class="text-center bg-primary text-white"> Logout foam 2022</h2>
+                <form>
+                    <div style="margin-bottom:16px;">
+                        <label>Username:</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                       <div class="mb-4">
+                        <label>PassWord:</label>
+                        <input type="password" name="" class="form-control">
+                    </div>
+                    <div class="mb-4">
+                        <label>Eamil:</label>
+                        <input type="eamil" name="" class="form-control">
+                    </div>                   
+                        <button type="button" class="btn btn-success btn-lg"style="margin-top:20px;">Logout:</button>
+                    </div>
+                </form>
+            </div>
+        </div><!--row-end-->
+    </div><!--container-fluid-->
+<%- include('../../footer.ejs') %>

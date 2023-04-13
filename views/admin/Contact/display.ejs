@@ -1,0 +1,56 @@
+<%- include('../../header.ejs') %>
+
+<link rel="stylesheet" href="/css/blogdisplay.css">
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-2 ty"style="margin-top:100px;">
+                <a href="/admin/dashboard" 
+                <button type="button" class="btn  tw ii">Dashboard</button>
+            </a>
+            <a href="/admin/blogdisplay" 
+                <button type="button" class="btn  tw">Display Blog</button>
+              </a>
+                <a href="/admin/Categoriesdisplay" 
+                <button type="button" class="btn  tw">Categories</button>
+            </a>
+                <a href="admin/Contactdisplay" 
+                <button type="button" class="btn  tw">Contact</button>
+            </a>
+                <a href="/admin/aboutdisplay" 
+                <button type="button" class="btn  tw">About</button>
+            </a>
+            
+                <a href="/logout" 
+                <button type="button" class="btn  tw">Logout</button>
+            </a>
+            </div>
+        <div class="col-md-10" style="margin-top:100px;">
+            <button type="button" class="btn btn-primary pp" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Contacts
+              </button>
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>S.No</th>
+                  <th>Name</th>
+                  <th>E-mail</th>
+                  <th>phone no</th>
+                  <th>message</th>
+                </tr>
+                <% d.forEach((b)=>{ %>
+               <tr>
+                    <td><%= b._id %></td> 
+                    <td><%= b.name %></td>
+                    <td><%= b.email %></td>
+                    <td><%= b.phone %></td>
+                    <td><%= b.message %></td>
+                  </tr>
+                  <% }) %>
+              </table>
+        </div>
+    </div><!--row-end-->
+</div><!--container-end-->
+
+
+
+<%- include('../../footer.ejs') %>

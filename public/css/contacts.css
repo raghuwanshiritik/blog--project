@@ -1,0 +1,62 @@
+
+.mm{
+    width: 100%;
+    height: 500px;
+ }
+ .ww{  
+margin-top: -400px;
+color:aliceblue;
+text-align: center;
+font-size:70px;
+font-family: maths;
+}
+
+
+.bb{
+display:none;
+}
+.nn{
+display:block;
+color:white;
+text-align: center;
+font-size: 20px;
+
+font-family: 'Courier New', Courier, monospace;
+}
+@media(max-width:768px){
+.bb{
+display:block;
+color:white;
+font-family: 'Courier New', Courier, monospace;
+}
+.nn{
+display:none;
+}
+}   
+.vv{
+margin-top: 150px;
+}
+
+.hh{
+margin-top: 50px;
+}
+.gg{
+margin-top: 50px;
+letter-spacing: 5px;
+font-family: maths;
+font-size: 20px;
+}
+.cc{
+margin-top: 50px;
+}
+.xx{
+margin-top: 20px;
+}
+.zz{
+margin-top: 50px;
+}
+.ll{
+width: 100%;
+height: 400px;
+margin-top: 50px;
+}

@@ -1,0 +1,55 @@
+<%- include('../../header.ejs') %>
+
+<link rel="stylesheet" href="/css/categoriesdisplay.css">
+
+<div class="container">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4 ty"style="margin-top:100px;">
+                <a href="/admin/dashboard" 
+                <button type="button" class="btn  tw ii">Dashboard</button>
+            </a>
+            <a href="/admin/blogdisplay" 
+                <button type="button" class="btn  tw">Display Blog</button>
+              </a>
+                <a href="/admin/Categoriesdisplay" 
+                <button type="button" class="btn  tw">Categories</button>
+            </a>
+                <a href="/admin/contactdisplay" 
+                <button type="button" class="btn  tw">Contact</button>
+            </a>
+                <a href="/admin/aboutdisplay" 
+                <button type="button" class="btn  tw">About</button>
+            </a>
+            
+                <a href="/admin/logutdisplay" 
+                <button type="button" class="btn  tw">Logout</button>
+            </a>
+            </div>
+
+
+
+        <div class="col-md-8" style="margin-top:100px;">
+            <button type="button" class="btn btn-primary pp" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Blog
+              </button>
+                <table>
+                <tr>
+                    <th colspan="5">View </th>
+                    </tr>
+                    <tr> <!-- <tr>table row -->
+                     <th>ID NO.</th>
+                     <th>Cat_name</th>
+                    
+                    
+                    </tr>
+                      <tr>
+                        <td><%= view._id %></td>
+                        <td><%= view.cat_name %></td>
+                  </table>
+        </div>
+    </div><!--row-end-->
+</div><!--container-end-->
+
+<%- include('../../footer.ejs') %>

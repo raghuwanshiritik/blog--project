@@ -1,0 +1,62 @@
+body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar {
+    background: #00000082!important;
+  }
+
+  .navbar-nav li {
+    padding: 0 10px;
+  }
+
+  .navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600px;
+    font-size: 20px;
+  }
+  .carousel-caption{
+    color: #fff;
+    position: absolute; 
+    top: 27%;
+    left: 153px;
+  }
+  
+  .b {
+    text-align: center;
+  }
+
+  .weblogo {
+    width: 65px;
+  }
+
+  .moblogo {
+    display: none;
+    width: 65px;
+    height:65px;
+  }
+
+  @media(max-width:400px) {
+    .moblogo {
+      display: block;
+    }
+
+    .weblogo {
+      display: none;
+    }
+
+    .navbar {
+      background: rgba(17, 44, 58, 0.847) !important;
+    }
+  }
+ 
+  @media(max-width:768px) {
+    .moblogo1 {
+      display: block;
+    }
+
+    .weblogo1 {
+      display: none;
+    }
+  }

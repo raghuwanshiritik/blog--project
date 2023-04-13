@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/blogdetail.css">
+<%- include('./header.ejs')  %>
+<link rel="stylesheet" href="/css/blogdetail.css">
+    <section class="blog-detail mtb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-left">
+                        <h1>
+                            <%= r.title%>
+                        </h1>
+                            <div class="posted-on">
+                            <p>by <span>RSGITECH</span>on<span><%= r.createdAt.toLocaleDateString()%></span></p>
+                        </div>
+                        <div class="detail-img">
+                            <img src="<%= r.image.url %>" width="280" height="290"  alt="blog1" class="blogpic" />
+                        </div>
+                        <div class="blog1-desc">
+                            <p><%= r.description%></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-right">
+                        <div class="right-widget recent-post">
+                            <h3>Recent Blog</h3>
+                            <% recentblog.forEach((items)=>{ %>
+                              <a href="/detail/<%= items._id %>">
+                                <div class="rb-box">
+                                    <div class="rb-box-img">
+                                        <img src="<%=items.image.url%>"style="width:100px;height:100px;"class="ddk">
+                                    </div>
+                                    <div class="rb-box-desc ppj">
+                                        <h4><%=items.title %></h4>
+                                        <p><%= items.createdAt.toLocaleDateString() %></p>
+                                    </div>
+                                </div>
+                              </a>
+                       <% }) %>
+                        </div>
+                        <div class="right-widget categories"style="margin-top:50px;">
+                            <h3>Categories</h3>
+                            <ul>
+                                <% cat.forEach((items)=>{ %>
+                               <li><a href="/detailbycat/<%= items.categories_name %>"><%= items.cat_name %></a></li>
+                             <%  }) %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-end-->
+        </div><!--container-end-->
+    </section>
+
+<%- include('./footer.ejs')  %>

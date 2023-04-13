@@ -1,0 +1,64 @@
+<%- include('../../header.ejs') %>
+    <link rel="stylesheet" href="/css/Categoriesdisplay.css">
+    <div class="container">
+        <div class="row">
+                <%- include('../adminsidebar.ejs') %>
+            <div class="col-md-8" style="margin-top:100px;">
+                <form action="/insertcategories" method="post">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    style="width:150px;  margin-left: 500px;
+                margin-top:-50px;">
+                    Add Categories
+                </button>
+                <table>
+                    <tr>
+                        <th colspan="5">Categories</th>
+                    </tr>
+                    <tr> <!-- <tr>table row -->
+                        <th>ID NO.</th>
+                        <th>Cat_name</th>
+                        <th>Action</th>
+                    </tr>
+                    <% d.forEach((item)=>{%>
+                        <tr>
+                          <td><%= item._id %></td>
+                          <td><%= item.cat_name %></td>
+                          
+                          <td>
+
+                            <a href="/categoriesview/<%=item.id %>" class="btn btn-info"><i class="fa-solid fa-eye mr"></i></a>
+                            <a href="/admin/categoriesedit/<%= item._id %>" class="btn btn-info"><i class="fa-solid fa-pen-to-square  mr"></i></a>
+  
+                            <a href="/admin/categoriesdelete/<%= item._id %>" class="btn btn-info"><i class="fa-solid fa-trash mr"></i>
+                            </td>
+                       </tr>
+                      <% }) %>
+                     
+        
+                </table>
+            </div>
+        </form>
+        </div><!--row-end-->
+    </div><!--container-end-->
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Blog</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/insertcategories" method="post">
+            <div class="md-3">
+                <label for=>Cat_name</label>
+                <input  type="text" name="cat_name" class="form-contrl">
+            </div>
+            <button class="btn btn-info">submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <%- include('../../footer.ejs') %>
