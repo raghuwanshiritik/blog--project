@@ -2,7 +2,27 @@
     <link rel="stylesheet" href="/css/Categoriesdisplay.css">
     <div class="container">
         <div class="row">
-                <%- include('../adminsidebar.ejs') %>
+          <div class="col-md-4 ty"style="margin-top:100px;">
+            <a href="/admin/dashboard" 
+            <button type="button" class="btn  tw ii">Dashboard</button>
+        </a>
+        <a href="/admin/blogdisplay" 
+            <button type="button" class="btn  tw">Display Blog</button>
+          </a>
+            <a href="/admin/Categoriesdisplay" 
+            <button type="button" class="btn  tw">Categories</button>
+        </a>
+            <a href="/admin/contactdisplay" 
+            <button type="button" class="btn  tw">Contact</button>
+        </a>
+            <a href="/admin/aboutdisplay" 
+            <button type="button" class="btn  tw">About</button>
+        </a>
+        
+            <a href="/logout" 
+            <button type="button" class="btn  tw">Logout</button>
+        </a>
+        </div>
             <div class="col-md-8" style="margin-top:100px;">
                 <form action="/insertcategories" method="post">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -33,8 +53,6 @@
                             </td>
                        </tr>
                       <% }) %>
-                     
-        
                 </table>
             </div>
         </form>

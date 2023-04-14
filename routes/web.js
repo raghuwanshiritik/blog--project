@@ -53,10 +53,10 @@ router.get('/admin/Categoriesdelete/:id',CategoriesController.categoriesdelete)
 
 //About Controller
 router.get('/admin/Aboutdisplay',auth,AboutController.displayabout)
-router.post('/insertAbout',AboutController.insertabout)
-router.get('/admin/Aboutedit/:id',AboutController.aboutEdit)
-router.post('/Aboutupdate/:id',AboutController.aboutUpdate)
-router.get('/admin/Aboutdelete/:id',AboutController.aboutdelete)
+router.post('/insertAbout',auth,AboutController.insertabout)
+router.get('/admin/Aboutedit/:id',auth,AboutController.aboutEdit)
+router.post('/Aboutupdate/:id',auth,AboutController.aboutUpdate)
+router.get('/admin/Aboutdelete/:id',auth,AboutController.aboutdelete)
 
 //contact controller
 router.get('/admin/Contactdisplay',auth,ContactController.displaycontact)
