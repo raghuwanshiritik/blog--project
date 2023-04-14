@@ -43,24 +43,24 @@ router.post('/Blogupdate/:id',BlogController.blogUpdate)
 router.get('/admin/Blogdelete/:id',BlogController.blogdelete)
 
 //categories controller
-router.get('/admin/categoriesdisplay',auth,CategoriesController.displayCategories)
-router.post('/insertcategories',CategoriesController.insertcategories)
-router.get('/categoriesview/:id',CategoriesController.categoriesview)
-router.get('/admin/categoriesedit/:id',CategoriesController.categoriesEdit)
-router.post('/categoriesupdate/:id',CategoriesController.categoriesUpdate)
-router.get('/admin/categoriesdelete/:id',CategoriesController.categoriesdelete)
+router.get('/admin/Categoriesdisplay',auth,CategoriesController.displayCategories)
+router.post('/insertCategories',CategoriesController.insertcategories)
+router.get('/Categoriesview/:id',CategoriesController.categoriesview)
+router.get('/admin/Categoriesedit/:id',CategoriesController.categoriesEdit)
+router.post('/Categoriesupdate/:id',CategoriesController.categoriesUpdate)
+router.get('/admin/Categoriesdelete/:id',CategoriesController.categoriesdelete)
 
 
 //About Controller
-router.get('/admin/aboutdisplay',auth,AboutController.displayabout)
-router.post('/insertabout',AboutController.insertabout)
-router.get('/admin/aboutedit/:id',AboutController.aboutEdit)
-router.post('/aboutupdate/:id',AboutController.aboutUpdate)
-router.get('/admin/blogdelete/:id',AboutController.aboutdelete)
+router.get('/admin/Aboutdisplay',auth,AboutController.displayabout)
+router.post('/insertAbout',AboutController.insertabout)
+router.get('/admin/Aboutedit/:id',AboutController.aboutEdit)
+router.post('/Aboutupdate/:id',AboutController.aboutUpdate)
+router.get('/admin/Aboutdelete/:id',AboutController.aboutdelete)
 
 //contact controller
-router.get('/admin/contactdisplay',auth,ContactController.displaycontact)
-router.post('/insertcontact',ContactController.contactInsert)
+router.get('/admin/Contactdisplay',auth,ContactController.displaycontact)
+router.post('/insertContact',ContactController.contactInsert)
 
 //logout controller
 router.get('/admin/logutdisplay',LogoutController.displaylogout)
