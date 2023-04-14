@@ -35,12 +35,12 @@ router.get('/logout',AdminController.logout)
 
 
 //blog controller
-router.get('/admin/blogdisplay',auth,BlogController.displayBlog)
-router.post('/insertblog',BlogController.insertblog)
-router.get('/blogview/:id',BlogController.blogview)
+router.get('/admin/Blogdisplay',auth,BlogController.displayBlog)
+router.post('/insertBlog',BlogController.insertblog)
+router.get('/Blogview/:id',BlogController.blogview)
 router.get('/admin/blogedit/:id',BlogController.blogEdit)
-router.post('/blogupdate/:id',BlogController.blogUpdate)
-router.get('/admin/blogdelete/:id',BlogController.blogdelete)
+router.post('/Blogupdate/:id',BlogController.blogUpdate)
+router.get('/admin/Blogdelete/:id',BlogController.blogdelete)
 
 //categories controller
 router.get('/admin/categoriesdisplay',auth,CategoriesController.displayCategories)

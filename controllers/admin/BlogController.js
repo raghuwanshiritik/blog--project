@@ -17,7 +17,7 @@ class BlogController {
 
     const data = await BlogModel.find()
     // console.log(data)
-    res.render('admin/blog/display',{d:data})
+    res.render('admin/Blog/display',{d:data})
     
  }catch(error){
     console.log(error)
@@ -46,7 +46,7 @@ const result = new BlogModel({
 })
 await result.save()
 //route url
- res.redirect('/admin/blogdisplay')
+ res.redirect('/admin/Blogdisplay')
     }catch(error){
 console.log(error)
     }
@@ -63,7 +63,7 @@ console.log(error)
         try{
             const result =await BlogModel.findById(req.params.id)
             //console.log(result)
-            res.render('admin/blog/view',{view:result})
+            res.render('admin/Blog/view',{view:result})
         }
         catch(error){
             console.log(error)
@@ -74,7 +74,7 @@ console.log(error)
         try{
             const result =await BlogModel.findById(req.params.id)
             //console.log(result)
-            res.render('admin/blog/edit',{edit:result})
+            res.render('admin/Blog/edit',{edit:result})
 
         }
         catch(error){
@@ -111,14 +111,14 @@ console.log(error)
             })
 
             await update.save()
-            res.redirect('/admin/blogdisplay')
+            res.redirect('/admin/Blogdisplay')
     } else {
         const update = await BlogModel.findByIdAndUpdate(req.params.id,{
             title: req.body.  title,
             description: req.body.description,
         })
         await update.save()
-        res.redirect('/admin/blogdisplay')
+        res.redirect('/admin/Blogdisplay')
     }
         }
         catch (error){
@@ -138,7 +138,7 @@ console.log(error)
 
            await BlogModel.findByIdAndDelete(req.params.id,)
            
-               res.redirect('/admin/blogdisplay')
+               res.redirect('/admin/Blogdisplay')
             }
             
         catch (error){
