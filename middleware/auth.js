@@ -14,7 +14,7 @@ const checkAdminAuth = async (req,res,next) =>{
         'ritikraghuwanshi123')
         // console.log(data)
         const admin =await AdminModel.findOne({_id:data.id})
-        //console.log(admin)
+        // console.log(admin)
         req.admin = admin
         next()
     }

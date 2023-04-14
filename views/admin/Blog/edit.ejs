@@ -8,7 +8,7 @@
 <form action="/blogupdate/<%= edit._id %>" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="">title</label>
-        <input type="text" class="from-control" name=" title" value="<%= edit.title %>">
+        <input type="text" class="from-control" name="title" value="<%= edit.title %>">
     </div>
     <div class="mb-3">
         <label for="">Description</label>
@@ -20,10 +20,12 @@
         <input type="file" name="image" class="form-control">
     </div>
     <div class="md-3 mb-3">
-    <img src="<%= edit.image.url %>">
+    <img src="<%= edit.image.url %>"style="width:400px;">
 </div>
     <button class="btn btn-info">update</button>
 </form>
+</div>
+</div>
 </div>
 </div><!--row-end-->
 </div><!--container-end-->

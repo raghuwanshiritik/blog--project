@@ -114,6 +114,24 @@ class AboutController {
         }
     }
    
+    static aboutdelete = async(req,res)=>{
+        
+      try{
+          //delete image code
+      const about = await AboutModel.findById(req.params.id)
+      const imsageid =about.image.public_id
+  //   console.log(imageid)
+  await cloudinary.uploader.destroy(imsageid)
+
+         await AboutModel.findByIdAndDelete(req.params.id,)
+         
+             res.redirect('/admin/aboutdisplay')
+          }
+          
+      catch (error){
+    console.log(error)
+      }
+  }
 
 
 }

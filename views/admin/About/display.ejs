@@ -27,7 +27,7 @@
             </div>
         <div class="col-md-8" style="margin-top:100px;">
             <button type="button" class="btn btn-primary pp" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Add Blog
+                Add About
               </button>
                 <table>
                 <tr>
@@ -35,7 +35,8 @@
                     </tr>
                     <tr> <!-- <tr>table row -->
                      <th>ID NO.</th>
-                     <th>about</th>
+                     <th>Title</th>
+                     <th>Description</th>
                      <!-- <th>Image</th> -->
                      <th>Image</th>
                      <th>Action</th>
@@ -44,9 +45,11 @@
                       <tr>
                         <td><%= item._id %></td>
                         <td><%= item.title %></td>
+                        <td><%= item.description %></td>
                           <td><img src="<%= item.image.url %>" width="50px;"></td>
                           <td>
                            <a href="/admin/aboutedit/<%= item._id %>" class="btn btn-info"><i class="fa-solid fa-pen-to-square  mr"></i></a>
+                           <a href="/admin/aboutdelete/<%= item._id %>" class="btn btn-info"><i class="fa-solid fa-trash mr"></i>
                           </td>
                      </tr>
                     <% }) %>
@@ -63,14 +66,19 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-about fs-5" id="exampleModalLabel">Add Blog</h1>
+          <h1 class="modal-about fs-5" id="exampleModalLabel">Add About</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form action="/insertabout" method="post" enctype="multipart/form-data">
             <div class="md-3">
-              <label for="">About</label>
-              <textarea  type="text" name="title" class="form-contrl"></textarea>
+              <label for=>title</label>
+              <input  type="text" name="title" class="form-contrl">
+          </div>
+          <br>
+          <div class="md-3">
+              <label for="">Description</label>
+              <textarea  type="text" name="description" class="form-contrl"></textarea>
           </div>
           <br>
           <div class="md-3">

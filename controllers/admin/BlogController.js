@@ -37,7 +37,7 @@ const myimage = await cloudinary.uploader.upload(file.tempFilePath,{
     folder:'blogImage'
 })
 const result = new BlogModel({
-    title: req.body.title,
+      title: req.body.  title,
     description: req.body.description,
     image:{
         public_id: myimage.public_id,
@@ -85,6 +85,7 @@ console.log(error)
     static blogUpdate = async(req,res)=>{
         
         try{
+            if (req.files) {
             // console.log(req.body)
             // console.log(req.params.id)
 
@@ -101,7 +102,7 @@ console.log(error)
         })
 
             const update = await BlogModel.findByIdAndUpdate(req.params.id,{
-                title: req.body.title,
+                  title: req.body.  title,
                 description: req.body.description,
                 image: {
                     public_id: myimage.public_id,
@@ -111,6 +112,14 @@ console.log(error)
 
             await update.save()
             res.redirect('/admin/blogdisplay')
+    } else {
+        const update = await BlogModel.findByIdAndUpdate(req.params.id,{
+            title: req.body.  title,
+            description: req.body.description,
+        })
+        await update.save()
+        res.redirect('/admin/blogdisplay')
+    }
         }
         catch (error){
       console.log(error)

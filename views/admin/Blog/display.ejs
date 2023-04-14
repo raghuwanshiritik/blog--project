@@ -44,7 +44,7 @@
                       <tr>
                         <td><%= item._id %></td>
                         <td><%= item.title %></td>
-                        <td><%= item.description %></td>
+                        <td><%= item.description.slice(0,100) %></td>
                         <td><img src="<%= item.image.url %>" width="100px;"></td>
                       <td>                   
                           <a href="/blogview/<%=item.id %>" class="btn btn-info"><i class="fa-solid fa-eye mr"></i></a>

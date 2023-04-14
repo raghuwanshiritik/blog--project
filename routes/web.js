@@ -56,6 +56,7 @@ router.get('/admin/aboutdisplay',auth,AboutController.displayabout)
 router.post('/insertabout',AboutController.insertabout)
 router.get('/admin/aboutedit/:id',AboutController.aboutEdit)
 router.post('/aboutupdate/:id',AboutController.aboutUpdate)
+router.get('/admin/blogdelete/:id',AboutController.aboutdelete)
 
 //contact controller
 router.get('/admin/contactdisplay',auth,ContactController.displaycontact)

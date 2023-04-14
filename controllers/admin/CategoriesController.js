@@ -18,7 +18,7 @@ class CategoriesController {
     
     static insertcategories = async (req, res) => {
         try {
-             console.log(req.body.catname)
+            //  console.log(req.body.catname)
         //const result =await CategoriesModel.create(req.body)
         //console.log(result)
         const result =new CategoriesModel({
@@ -44,7 +44,7 @@ class CategoriesController {
             console.log(error)
         }
     }
-
+    
     static categoriesEdit =async(req,res)=>{
         try{
             const result =await CategoriesModel.findById(req.params.id)
@@ -60,7 +60,7 @@ class CategoriesController {
     static categoriesUpdate = async(req,res)=>{
         
         try{
-
+            if (req.files) {
             //  console.log(req.body)
             // console.log(req.params.id)
 
@@ -69,8 +69,15 @@ class CategoriesController {
           })
           await update.save()
            res.redirect('/admin/categoriesdisplay')
-            }
-            
+        } else {        
+          
+            const update = await CategoriesModel.findByIdAndUpdate(req.params.id,{
+                cat_name: req.body.cat_name,
+            })
+            await update.save()
+            res.redirect('/admin/categoriesdisplay')
+        }
+    }
         catch (error){
       console.log(error)
         }
