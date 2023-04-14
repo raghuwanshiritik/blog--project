@@ -9,7 +9,7 @@ class CategoriesController {
        
            const data = await CategoriesModel.find()
            // console.log(data)
-           res.render('admin/categories/display',{d:data})
+           res.render('admin/Categories/display',{d:data})
            
         }catch(error){
            console.log(error)
@@ -38,7 +38,7 @@ class CategoriesController {
         try{
             const result =await CategoriesModel.findById(req.params.id)
             //console.log(result)
-            res.render('admin/categories/view',{view:result})
+            res.render('admin/Categories/view',{view:result})
         }
         catch(error){
             console.log(error)
@@ -49,7 +49,7 @@ class CategoriesController {
         try{
             const result =await CategoriesModel.findById(req.params.id)
             //console.log(result)
-            res.render('admin/categories/edit',{edit:result})
+            res.render('admin/Categories/edit',{edit:result})
 
         }
         catch(error){
@@ -68,14 +68,14 @@ class CategoriesController {
             cat_name: req.body.cat_name,
           })
           await update.save()
-           res.redirect('/admin/categoriesdisplay')
+           res.redirect('/admin/Categoriesdisplay')
         } else {        
           
             const update = await CategoriesModel.findByIdAndUpdate(req.params.id,{
                 cat_name: req.body.cat_name,
             })
             await update.save()
-            res.redirect('/admin/categoriesdisplay')
+            res.redirect('/admin/Categoriesdisplay')
         }
     }
         catch (error){
@@ -90,7 +90,7 @@ class CategoriesController {
         try{
            await CategoriesModel.findByIdAndDelete(req.params.id,)
            
-               res.redirect('/admin/categoriesdisplay')
+               res.redirect('/admin/Categoriesdisplay')
             }
             
         catch (error){

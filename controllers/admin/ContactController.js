@@ -7,7 +7,7 @@ class ContactController{
         try{
             const display = await ContactModel.find()
             //console.log(display)
-            res.render('admin/contact/display',{d:display})
+            res.render('admin/Contact/display',{d:display})
         }
         catch(error){
             console.log(error)
@@ -26,7 +26,7 @@ class ContactController{
         })
 
          await insert.save()
-         res.redirect('/contacts')
+         res.redirect('/Contacts')
     }
     catch(error){
         console.log(error)

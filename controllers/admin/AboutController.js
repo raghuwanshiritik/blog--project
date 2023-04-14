@@ -18,7 +18,7 @@ class AboutController {
 
    const data = await AboutModel.find()   
    // console.log(data)
-     res.render('admin/about/display',{d:data})
+     res.render('admin/About/display',{d:data})
     
   }catch(error){
      console.log(error)
@@ -43,7 +43,7 @@ class AboutController {
               })
 
               await result.save()
-               res.redirect('/admin/aboutdisplay')
+               res.redirect('/admin/Aboutdisplay')
         }catch (error) {
             console.log(error)
         }
@@ -55,7 +55,7 @@ class AboutController {
         try{
             const result =await AboutModel.findById(req.params.id)
             //console.log(result)
-            res.render('admin/about/edit',{edit:result})
+            res.render('admin/About/edit',{edit:result})
 
         }
         catch(error){
@@ -107,7 +107,7 @@ class AboutController {
             })
 
             await update.save()
-            res.redirect('/admin/aboutdisplay')
+            res.redirect('/admin/Aboutdisplay')
         }
         catch (error){
       console.log(error)
@@ -125,7 +125,7 @@ class AboutController {
 
          await AboutModel.findByIdAndDelete(req.params.id,)
          
-             res.redirect('/admin/aboutdisplay')
+             res.redirect('/admin/Aboutdisplay')
           }
           
       catch (error){
