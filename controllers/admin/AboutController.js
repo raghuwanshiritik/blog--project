@@ -82,9 +82,9 @@ class AboutController {
     // }
    
 
-    static aboutUpdate = async(req,res)=>{
-        
+    static aboutUpdate = async(req,res)=>{      
         try{
+          if (req.files) {
             //first delete the image
             const about = await AboutModel.findById(req.params.id)
             const imsageid =about.image.public_id
@@ -100,7 +100,7 @@ class AboutController {
             const update = await AboutModel.findByIdAndUpdate(req.params.id,{
                 title: req.body.title,
                 description: req.body.description,
-                image: {
+                image:{
                     public_id: myimage.public_id,
                     url: myimage.secure_url
                 }
@@ -108,7 +108,15 @@ class AboutController {
 
             await update.save()
             res.redirect('/admin/Aboutdisplay')
-        }
+      } else {
+        const update = await AboutModel.findByIdAndUpdate(req.params.id,{
+          title: req.body.title,
+          description: req.body.description,
+      })
+      await update.save()
+      res.redirect('/admin/Aboutdisplay')
+  }
+      }
         catch (error){
       console.log(error)
         }
