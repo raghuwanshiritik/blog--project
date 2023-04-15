@@ -29,9 +29,9 @@ router.get('/register',FrontController.register)
 
 //admin controller
 router.get('/admin/dashboard',auth,AdminController.dashboard)
-router.post('/adminregister',auth,AdminController.register)
-router.post('/verifylogin',auth,AdminController.verifylogin)
-router.get('/logout',auth,AdminController.logout)
+router.post('/adminregister',AdminController.register)
+router.post('/verifylogin',AdminController.verifylogin)
+router.get('/logout',AdminController.logout)
 
 
 //blog controller
