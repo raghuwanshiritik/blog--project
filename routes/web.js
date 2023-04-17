@@ -60,7 +60,7 @@ router.get('/admin/Aboutdelete/:id',auth,AboutController.aboutdelete)
 
 //contact controller
 router.get('/admin/Contactdisplay',auth,ContactController.displaycontact)
-router.post('/insertContact',auth,ContactController.contactInsert)
+router.post('/insertContact',ContactController.contactInsert)
 
 //logout controller
 router.get('/admin/logutdisplay',LogoutController.displaylogout)
